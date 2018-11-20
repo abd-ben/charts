@@ -7,12 +7,16 @@ package test;
 
 import beans.Employe;
 import beans.Machine;
+import beans.Marque;
+import beans.Profil;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.pdf.PdfDocument;
 import com.itextpdf.text.pdf.PdfWriter;
 import java.util.Date;
 import service.EmployeService;
 import service.MachineService;
+import service.MarqueService;
+import service.ProfileService;
 import util.HibernateUtil;
 
 /**
@@ -22,10 +26,13 @@ import util.HibernateUtil;
 public class Test {
 
     public static void main(String[] args) {
-        HibernateUtil.getSessionFactory().openSession();
-       EmployeService es = new EmployeService();
-       System.out.println(es.graphe1());
         
-       
+        Profil profil = new Profil("C10", "Dev");
+        ProfileService ps = new ProfileService();
+        //ps.create(profil);
+        
+        EmployeService es = new EmployeService();
+        Employe employe = new Employe("ben", "abd", new Date(), "abd@ben.ka", "123456", ps.findById(1));
+        es.create(employe);
     }
 }

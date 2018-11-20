@@ -65,6 +65,9 @@
                                     <a href="machine.jsp"><i class="fa fa-table fa-fw"></i> Gestion des machines</a>
                                 </li>
                                 <li>
+                                    <a href="marque.jsp"><i class="fa fa-table fa-fw"></i> Gestion des marques</a>
+                                </li>
+                                <li>
                                     <a href="profile.jsp"><i class="fa fa-table fa-fw"></i> Gestion des Profils</a>
                                 </li>
                                 <li>
